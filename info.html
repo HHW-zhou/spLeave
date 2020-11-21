@@ -1085,15 +1085,15 @@
                                 <div data-v-53f89046="" class="header bg-purple">请假条-已通过 </div>
                                 <div data-v-53f89046="" class="body">
                                     <p data-v-53f89046=""><span data-v-53f89046="">姓名：</span><span
-                                            data-v-53f89046="">王文汉（2020010467）</span></p>
+                                            data-v-53f89046="">周鹏（2020010467）</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">学院：</span><span
                                             data-v-53f89046="">计算机科学与信息工程学院</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">专业：</span><span
                                             data-v-53f89046="">电子信息</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">开始时间：</span><span
-                                            data-v-53f89046="">2020/11/16 09:00</span></p>
+                                            data-v-53f89046="" id="stime">2020/11/16 09:00</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">结束时间：</span><span
-                                            data-v-53f89046="">2020/11/16 21:00</span></p>
+                                            data-v-53f89046="" id="etime">2020/11/16 21:00</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">请假理由：</span><span
                                             data-v-53f89046="">出去有事</span></p>
                                     <p data-v-53f89046=""><span data-v-53f89046="">去向地址：</span><span
@@ -1226,6 +1226,20 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var obj = new Date();
+            var year = obj.getFullYear();
+            var month = obj.getMonth() + 1;
+            var day = obj.getDate();
+            $("#stime").html(year+"/"+month+"/"+day + " 08:00");
+            $("#etime").html(year+"/"+month+"/"+day + " 23:00");
+        });
+    </script>
+
 </body>
 
 </html>
